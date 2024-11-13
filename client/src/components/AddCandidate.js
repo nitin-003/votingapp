@@ -426,8 +426,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';  // Import axios for HTTP requests
 
-const pinataApiKey = '9b9ea84a09d90ba311f7';  // Your Pinata API key
-const pinataApiSecret = 'fa9bd6d6ceaab1336039f935531dbedbbb241883f2450e6d97d79c153d4faf44';  // Your Pinata Secret key
+const pinataApiKey = '2af5736dc2b423fa8116';  // Your Pinata API key
+const pinataApiSecret = '7cf7858ffd7d1b45c584f2752f98cd998e0c171feddac2131ab048f2c8d0d1e4';  // Your Pinata Secret key
 const pinataUrl = 'https://api.pinata.cloud/pinning/pinFileToIPFS';  // Pinata file upload endpoint
 
 const AddCandidate = () => {

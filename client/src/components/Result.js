@@ -69,6 +69,7 @@ const Result = () => {
         }
 
         getResultStatus();
+        console.log("Winner", winner);
     }, [])
 
 
@@ -103,10 +104,14 @@ const Result = () => {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 {winner && (<p className='text-center mt-2 text-xl font-semibold text-gray-900'>{winner.candidate_name + " of " + winner.candidate_partyName + " Won by " + winner.candidate_voteCount.toNumber() + "/" + totalVoter + " Votes "}</p>)}
                 {winner ? (<div className='w-[500px] p-5 m-auto'>
-                    <div className='flex justify-between items-center bg-gray-100 px-7 py-5 drop-shadow-xl rounded-[10px]'>
+                    <div className='flex justify-around items-center bg-gray-100 px-7 py-5 drop-shadow-xl rounded-[10px]'>
                         <img className='h-16 absolute top-0 left-[-20px]' src={img} alt="" />
                         <div className=''>
-                            <img className='h-24 rounded-[50px]' src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Official_portrait_of_Narendra_Modi%2C_2022_%28cropped%29.jpg" alt="" />
+                            <img className='h-24 w-24 rounded-full' 
+
+                            // src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Official_portrait_of_Narendra_Modi%2C_2022_%28cropped%29.jpg"
+                                src={winner.candidate_img}
+                             alt="" />
                         </div>
                         <div className=''>
                             <div className='mt-2'>
@@ -120,8 +125,9 @@ const Result = () => {
                             </div>
                         </div>
 
-                        <img className='h-12 absolute bottom-[-10px] right-0 rounded-[50px]'
-                         src="http://www.pngimagesfree.com/LOGO/B/BJP-Logo/SMALL/BJP-Logo-HD-PNG.png"
+                        <img className='absolute bottom-[-10px] right-0 h-14 w-14 rounded-full'
+                        //  src="http://www.pngimagesfree.com/LOGO/B/BJP-Logo/SMALL/BJP-Logo-HD-PNG.png"
+                        src={winner.candidate_partyLogo}
                           alt="" />
                     </div>
                 </div>
@@ -133,7 +139,7 @@ const Result = () => {
                             return (
                                 <div key={i} className='flex justify-between items-center bg-gray-100 px-7 py-5 drop-shadow-xl rounded-[10px]'>
                                     <div className=''>
-                                        <img className='h-24 rounded-[50px]' 
+                                        <img className='h-24 w-24 rounded-full' 
                                         // src={`https://ipfs.io/ipfs/${curr.candidate_img}`} 
                                         src={curr.candidate_partyLogo}
                                         alt="" />
@@ -150,7 +156,7 @@ const Result = () => {
                                         </div>
                                     </div>
 
-                                    <img className='h-12 absolute bottom-[-10px] right-0 rounded-[50px]' 
+                                    <img className='absolute bottom-[-10px] right-0 h-14 w-14 rounded-full' 
                                     // src={`https://ipfs.io/ipfs/${curr.candidate_partyLogo}`} 
                                     src={curr.candidate_partyLogo}
                                     alt="" />
