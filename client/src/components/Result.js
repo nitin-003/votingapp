@@ -141,7 +141,7 @@ const Result = () => {
                                     <div className=''>
                                         <img className='h-24 w-24 rounded-full' 
                                         // src={`https://ipfs.io/ipfs/${curr.candidate_img}`} 
-                                        src={curr.candidate_partyLogo}
+                                        src={curr.candidate_img}
                                         alt="" />
                                     </div>
                                     <div className=''>

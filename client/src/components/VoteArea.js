@@ -136,7 +136,8 @@ const VoteArea = () => {
               return (
                 <div className='flex flex-row justify-between items-center px-12 py-5 bg-gray-100 drop-shadow-xl rounded-[10px]'>
                   <div className=''>
-                    <img className='h-24 rounded-[50px]' 
+                    {/* <img className='h-24 rounded-[50px]'  */}
+                    <img className='h-24 w-24 rounded-full' 
                     // src={`https://ipfs.io/ipfs/${item.candidate_img}`} 
                     src={item.candidate_img}
                     alt="" />
@@ -159,7 +160,8 @@ const VoteArea = () => {
                     </div>
                   </div>
 
-                  <img className='h-12 absolute bottom-[-10px] right-0 rounded-[50px]' 
+                  {/* <img className='h-12 absolute bottom-[-10px] right-0 rounded-[50px]'  */}
+                  <img className='absolute bottom-[-10px] right-0 h-14 w-14 rounded-full' 
                   // src={`https://ipfs.io/ipfs/${item.candidate_partyLogo}`} 
                   src={item.candidate_partyLogo}
                   alt="" />

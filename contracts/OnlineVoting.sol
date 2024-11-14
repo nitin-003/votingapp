@@ -1,5 +1,4 @@
 // SPDX-Licence-Identifier: GPL-3.0
-
 pragma solidity >=0.5.0 <0.9.0;
 
 contract OnlineVoting {
@@ -87,8 +86,8 @@ contract OnlineVoting {
     function findMaxVoteCandidate() public{
         require(msg.sender == owner, "You don't have the access");
         uint256 max = 0;
-        for (uint256 i = 0; i < candidateCount; i++) {
-            if (candidate[i].candidate_voteCount > max) {
+        for(uint256 i = 0; i < candidateCount; i++) {
+            if(candidate[i].candidate_voteCount > max) {
                 max = candidate[i].candidate_voteCount;
                 winnerId = i;
                 isResultDeclared = true;
@@ -96,11 +95,11 @@ contract OnlineVoting {
         }
     }
 
-    function getWinner() public view returns (Candidate memory) {
+    function getWinner() public view returns (Candidate memory){
         return candidate[winnerId];
     }
 
-    function getCandidate() public view returns (Candidate[] memory) {
+    function getCandidate() public view returns (Candidate[] memory){
         Candidate[] memory allCandidate = new Candidate[](candidateCount);
 
         for (uint256 i = 0; i < candidateCount; i++) {
@@ -125,3 +124,6 @@ contract OnlineVoting {
     }
 
 }
+
+
+
