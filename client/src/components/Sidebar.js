@@ -20,12 +20,12 @@ const adminNav = [
     { id: 0, name: 'Candidate Details', to: '/dashboard/candidate-details', icon: InformationCircleIcon },
     { id: 1, name: 'Add Candidate', to: '/dashboard/add-candidate', icon: UserPlusIcon },
     { id: 2, name: 'Voters', to: '/dashboard/voters', icon: UsersIcon },
-    { id: 3, name: 'Change Phase', to: '#', icon: ArchiveBoxArrowDownIcon },
+    // { id: 3, name: 'Change Phase', to: '#', icon: ArchiveBoxArrowDownIcon },
     { id: 4, name: 'Result', to: '/dashboard/result', icon: ChartBarIcon },
 ]
 const voterNav = [
     { id: 0, name: 'Information', to: '/dashboard/', icon: InformationCircleIcon },
-    { id: 1, name: 'Voter Registration', to: '/dashboard/voter-registration', icon: CheckCircleIcon },
+    // { id: 1, name: 'Voter Registration', to: '/dashboard/voter-registration', icon: CheckCircleIcon },
     { id: 2, name: 'Vote-Area', to: '/dashboard/vote-area', icon: RectangleStackIcon },
     { id: 3, name: 'Result', to: '/dashboard/result', icon: ChartBarIcon },
 ]
